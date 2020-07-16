@@ -4,8 +4,9 @@ Date: May 2020
 """
 
 import twitter_credentials
-import tweepy
+import sys
 import json
+import tweepy
 from tweepy import OAuthHandler
 from tweepy import API
 
@@ -40,7 +41,7 @@ class TweetFinder():
 
         except:
             print("Authentication Credentials Invalid")
-            exit()
+            sys.exit()
 
     def get_tweets(self, handle, number_of_tweets):
 
